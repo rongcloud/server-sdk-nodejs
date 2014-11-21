@@ -1,0 +1,29 @@
+{
+  "name": "RongCloudServerSDK",
+  "version": "0.0.1",
+  "description": "The Server SDK of RongCloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rongcloud/server-sdk-nodejs.git"
+  },
+  "keywords": [
+    "mobile",
+    "im",
+    "server",
+    "sdk"
+  ],
+  "dependencies" : {
+    "superagent" : ">=0.21.0",
+    "sha1"       : ">=1.1.0"
+  },
+  "author": "RongCloud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rongcloud/server-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/rongcloud/server-sdk-nodejs"
+}
