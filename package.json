@@ -17,6 +17,8 @@
     "sdk"
   ],
   "dependencies" : {
+    "mocha"      : "*",
+    "should"     : "*",
     "superagent" : ">=0.21.0",
     "sha1"       : ">=1.1.0"
   },
