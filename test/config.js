@@ -7,10 +7,12 @@ module.exports = {
 		portraitUri : 'http://rongcloud.cn/images/logo.png'
 	},
 	message : {
-		fromUserId  : '0001',
-		toUserId	: '0002',
-		textMsg		: 'Hello, world!',
-		voiceMsg	: '{"content":"ergaqreg","duration":3}',
-		imageMsg	: '{"content":"ergaqreg", "imageKey":"http://www.demo.com/1.jpg"}'
+		fromUserId  : '546eb521c613156d331e91bb',
+		toUserId	: '5460603c1002a6e311f89e7f',
+		textMsg		: 'Hello, world!'
+	},
+	group : {
+		userId : '5460603c1002a6e311f89e7f',
+		groupIdNamePairs : { 'ProgrammerGroup1' : '程序猿交流群1', 'DriverGroup1' : '赛车手爱好者2群' }
 	}
 }
