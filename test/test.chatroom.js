@@ -30,14 +30,27 @@ describe( 'Chatroom Test', function() {
 	} );
 
 	describe( 'Destroy Chatroom', function() {
-		it( 'Destroy chatroom: should return OK', function( done ) {
-			rongSDK.chatroom.destroy( testConfig.chatroom.chatroomIDs, function( err, resultText ) {
+		it( 'Destroy a single chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.destroy( chatroomIDs.pop(), function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
 				done();
 			} );
 		} );
+
+		it( 'Destroy chatrooms: should return OK', function( done ) {
+			rongSDK.chatroom.destroy( chatroomIDs.splice( 0, 2 ), function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
 	} );
+
+
+
 
 } );
