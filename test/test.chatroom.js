@@ -20,11 +20,15 @@ describe( 'Chatroom Test', function() {
 
 	describe( 'Create Chatroom', function() {
 		it( 'Create chatroom: should return OK', function( done ) {
-			rongSDK.chatroom.create( testConfig.chatroom.chatroomIdNamePairs, function( err, resultText ) {
+			var chatroomIdNamePairsArray = [];
+			_.each( chatroomIDs, function( chatroomId ) {
+				chatroomIdNamePairsArray.push( { id : chatroomId, name : testConfig.chatroom.chatroomIdNamePairs[ chatroomId ] } );
+			} );
+			rongSDK.chatroom.create( chatroomIdNamePairsArray , function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
-				done();
+				done();				
 			} );
 		} );
 	} );
@@ -50,6 +54,33 @@ describe( 'Chatroom Test', function() {
 
 	} );
 
+
+	describe( 'Query Chatroom', function() {
+		it( 'Query a single chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.query( chatroomIDs[0], function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				var found = _.findWhere( result.chatRooms, { chrmId : chatroomIDs[0] } );
+				found.should.not.be.undefined;
+				found.should.have.property( 'chrmId', chatroomIDs[0] );				
+				done();
+			} );
+		} );
+
+		it( 'Query all chatrooms: should return OK', function( done ) {
+			rongSDK.chatroom.queryAll( function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				var found = _.findWhere( result.chatRooms, { chrmId : chatroomIDs[0] } );
+				found.should.not.be.undefined;
+				found.should.have.property( 'chrmId', chatroomIDs[0] );				
+				done();
+			} );
+		} );
+
+	} );
 
 
 
