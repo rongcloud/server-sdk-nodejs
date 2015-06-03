@@ -68,20 +68,6 @@ describe( 'Chatroom Test', function() {
 			} );
 		} );
 
-		it( 'Query all chatrooms: should return OK', function( done ) {
-			rongSDK.chatroom.queryAll( function( err, resultText ) {
-				should.not.exists( err );
-				var result = JSON.parse( resultText );
-				result.code.should.equal( 200 );
-				var found = _.findWhere( result.chatRooms, { chrmId : chatroomIDs[0] } );
-				found.should.not.be.undefined;
-				found.should.have.property( 'chrmId', chatroomIDs[0] );				
-				done();
-			} );
-		} );
-
 	} );
-
-
 
 } );
