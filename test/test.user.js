@@ -39,5 +39,16 @@ describe( 'User Test', function() {
 		} );
 	} );
 
+	describe( 'Check user online status', function() {
+		it( 'Check a non-existing user, should return OK', function( done ) {
+			rongSDK.user.checkOnline( 'im not here', function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+        result.status.should.equal( '0' );  // Notice: the status is a string, not int.
+				done();
+			} );
+		} );
+	} );
 
 } );
