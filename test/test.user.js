@@ -103,13 +103,72 @@ describe( 'User Test', function() {
 		} );
 	} );
 
+	describe( 'Black list', function() {
+		it( 'Add a user to the black list, should return OK', function( done ) {
+			rongSDK.user.addToBlacklist( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+        done();
+			} );
+		} );
+
+
+    // TODO Send a message from fromUserId to toUserId
+
+		it( 'Query a user\'s black list, should get the "Black User"', function( done ) {
+			rongSDK.user.queryBlacklist( testConfig.message.toUserId, function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+        var isInBlacklist = findUserId( result.users, testConfig.message.fromUserId );
+        isInBlacklist.should.equal( true );
+				result.code.should.equal( 200 );
+        done();
+			} );
+		} );
+
+		it( 'Remove a user from the black list, should return OK', function( done ) {
+			rongSDK.user.removeFromBlacklist( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+        done();
+			} );
+		} );
+
+    // TODO Send a message from fromUserId to toUserId
+
+		it( 'Query a user\'s black list, should get not the "Black User"', function( done ) {
+			rongSDK.user.queryBlacklist( testConfig.message.toUserId, function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+        var isInBlacklist = findUserId( result.users, testConfig.message.fromUserId );
+        isInBlacklist.should.equal( false );
+				result.code.should.equal( 200 );
+        done();
+			} );
+		} );
+
+	} );
+
 } );
 
 
 function findUser( users, userId ) {
   var found = false;
   for( var i=0; i<users.length; ++i ) {
-    if( users[i].userId === testConfig.token.userId ) {
+    if( users[i].userId === userId ) {
+      found = true;
+      break;
+    }
+  }
+  return found;
+}
+
+function findUserId( userIDs, userId ) {
+  var found = false;
+  for( var i=0; i<userIDs.length; ++i ) {
+    if( userIDs[i] === userId ) {
       found = true;
       break;
     }
