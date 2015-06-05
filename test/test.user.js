@@ -59,7 +59,7 @@ describe( 'User Test', function() {
 				result.code.should.equal( 200 );
 
         // Check if the user is in the blocked list.
-			  rongSDK.user.queryBlocked( function( err, resultText ) {
+			  rongSDK.user.block.query ( function( err, resultText ) {
           should.not.exists( err );
           var result = JSON.parse( resultText );
           result.code.should.equal( 200 );
@@ -82,7 +82,7 @@ describe( 'User Test', function() {
 				result.code.should.equal( 200 );
 
         // Check if the user is in the blocked list.
-			  rongSDK.user.queryBlocked( function( err, resultText ) {
+			  rongSDK.user.block.query( function( err, resultText ) {
           should.not.exists( err );
           var result = JSON.parse( resultText );
           result.code.should.equal( 200 );
@@ -105,7 +105,7 @@ describe( 'User Test', function() {
 
 	describe( 'Black list', function() {
 		it( 'Add a user to the black list, should return OK', function( done ) {
-			rongSDK.user.addToBlacklist( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
+			rongSDK.user.blacklist.add( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -117,7 +117,7 @@ describe( 'User Test', function() {
     // TODO Send a message from fromUserId to toUserId
 
 		it( 'Query a user\'s black list, should get the "Black User"', function( done ) {
-			rongSDK.user.queryBlacklist( testConfig.message.toUserId, function( err, resultText ) {
+			rongSDK.user.blacklist.query( testConfig.message.toUserId, function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
         var isInBlacklist = findUserId( result.users, testConfig.message.fromUserId );
@@ -128,7 +128,7 @@ describe( 'User Test', function() {
 		} );
 
 		it( 'Remove a user from the black list, should return OK', function( done ) {
-			rongSDK.user.removeFromBlacklist( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
+			rongSDK.user.blacklist.remove( testConfig.message.toUserId, testConfig.message.fromUserId, function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -139,7 +139,7 @@ describe( 'User Test', function() {
     // TODO Send a message from fromUserId to toUserId
 
 		it( 'Query a user\'s black list, should get not the "Black User"', function( done ) {
-			rongSDK.user.queryBlacklist( testConfig.message.toUserId, function( err, resultText ) {
+			rongSDK.user.blacklist.query( testConfig.message.toUserId, function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
         var isInBlacklist = findUserId( result.users, testConfig.message.fromUserId );
