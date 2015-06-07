@@ -30,7 +30,7 @@ describe( 'Message Test', function() {
 		} );
 
 		it( 'Image message: should return OK', function( done ) {
-			var imageMessageObject = { content : base64Image, imageKey : 'http://lanceju-com.qiniudn.com/raindrop.jpg' };
+			var imageMessageObject = { content : base64Image, imageUrl : 'http://lanceju-com.qiniudn.com/raindrop.jpg' };
 			rongSDK.message.publish( testConfig.message.fromUserId, testConfig.message.toUserId, 'RC:ImgMsg', JSON.stringify( imageMessageObject ), function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
