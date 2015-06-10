@@ -70,4 +70,18 @@ describe( 'Chatroom Test', function() {
 
 	} );
 
+	describe( 'Query Chatroom Users', function() {
+		it( 'Query the users of a chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.user.query( chatroomIDs[0], function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
+	} );
+
+
+
 } );
