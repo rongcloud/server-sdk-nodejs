@@ -20,24 +20,68 @@ describe( 'Chatroom Test', function() {
 
 	describe( 'Create Chatroom', function() {
 		it( 'Create chatroom: should return OK', function( done ) {
-			rongSDK.chatroom.create( testConfig.chatroom.chatroomIdNamePairs, function( err, resultText ) {
+			var chatroomIdNamePairsArray = [];
+			_.each( chatroomIDs, function( chatroomId ) {
+				chatroomIdNamePairsArray.push( { id : chatroomId, name : testConfig.chatroom.chatroomIdNamePairs[ chatroomId ] } );
+			} );
+			rongSDK.chatroom.create( chatroomIdNamePairsArray , function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
-				done();
+				done();				
 			} );
 		} );
 	} );
 
 	describe( 'Destroy Chatroom', function() {
-		it( 'Destroy chatroom: should return OK', function( done ) {
-			rongSDK.chatroom.destroy( testConfig.chatroom.chatroomIDs, function( err, resultText ) {
+		it( 'Destroy a single chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.destroy( chatroomIDs.pop(), function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
 				done();
 			} );
 		} );
+
+		it( 'Destroy chatrooms: should return OK', function( done ) {
+			rongSDK.chatroom.destroy( chatroomIDs.splice( 0, 2 ), function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
 	} );
+
+
+	describe( 'Query Chatroom', function() {
+		it( 'Query a single chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.query( chatroomIDs[0], function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				var found = _.findWhere( result.chatRooms, { chrmId : chatroomIDs[0] } );
+				found.should.not.be.undefined;
+				found.should.have.property( 'chrmId', chatroomIDs[0] );				
+				done();
+			} );
+		} );
+
+	} );
+
+	describe( 'Query Chatroom Users', function() {
+		it( 'Query the users of a chatroom: should return OK', function( done ) {
+			rongSDK.chatroom.user.query( chatroomIDs[0], function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
+	} );
+
+
 
 } );

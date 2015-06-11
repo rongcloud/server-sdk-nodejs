@@ -16,9 +16,12 @@
     "server",
     "sdk"
   ],
-  "dependencies": {
-    "sha1": ">=1.1.0",
-    "superagent": "^1.2.0"
+  "dependencies" : {
+    "mocha"      : "*",
+    "should"     : "*",
+    "underscore" : "*",
+    "superagent" : ">=0.21.0",
+    "sha1"       : ">=1.1.0"
   },
   "author": "RongCloud",
   "license": "MIT",
