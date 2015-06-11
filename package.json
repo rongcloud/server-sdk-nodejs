@@ -1,5 +1,5 @@
 {
-  "name": "RongCloudServerSDK",
+  "name": "rongcloud-sdk",
   "version": "0.0.1",
   "description": "The Server SDK of RongCloud",
   "main": "index.js",
