@@ -21,6 +21,12 @@
     "superagent": "^1.2.0"
   },
   "author": "RongCloud",
+  "contributors": [
+    {
+      "name": "crystaldust",
+      "email": "juzhenatpku@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rongcloud/server-sdk-nodejs/issues"
