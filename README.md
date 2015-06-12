@@ -20,7 +20,7 @@ rongcloudSDK.init( 'APP_KEY', 'APP_SECRET' );
 
 
 ```
-rongcloudSDK.user.getToken( '0001', 'Lance', 'http://7d9ov5.com1.z0.glb.clouddn.com/p_large_f9fF_447e000118ff2d0f.jpg', function( err, resultText ) {
+rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg', function( err, resultText ) {
   if( err ) {
     // Handle the error
   }
@@ -36,7 +36,7 @@ rongcloudSDK.user.getToken( '0001', 'Lance', 'http://7d9ov5.com1.z0.glb.clouddn.
 
 ##Asking for a xml format response
 ```
-rongcloudSDK.user.getToken( '0001', 'Lance', 'http://7d9ov5.com1.z0.glb.clouddn.com/p_large_f9fF_447e000118ff2d0f.jpg', 'xml', function( err, resultText ) {
+rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg', 'xml', function( err, resultText ) {
   if( err ) {
     // Handle the error
   }
@@ -48,18 +48,29 @@ rongcloudSDK.user.getToken( '0001', 'Lance', 'http://7d9ov5.com1.z0.glb.clouddn.
 
 ## API Coverage
 The SDK covers all of the RongCloud APIs, including:
+
 [User](http://www.rongcloud.cn/docs/server.html#用户服务)
+
 [User block](http://www.rongcloud.cn/docs/server.html#用户封禁服务)
+
 [User blackList](http://www.rongcloud.cn/docs/server.html#用户黑名单服务)
+
 [Message](http://www.rongcloud.cn/docs/server.html#消息发送服务)
+
 [Messsage routing](http://www.rongcloud.cn/docs/server.html#消息路由服务)
+
 [Message history](http://www.rongcloud.cn/docs/server.html#消息历史记录服务)
+
 [Group](http://www.rongcloud.cn/docs/server.html#群组服务)
+
 [Chatroom](http://www.rongcloud.cn/docs/server.html#聊天室服务)
 
 The SDK API is designed to keep accordant with the http request path, with all the **"/"** replaced with **"."**, that is, for the https API:
+
 `https://api.cn.rong.io/user/getToken`
+
 You can call 
+
 `rongcloudSDK.user.getToken`
 
 
