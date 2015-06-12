@@ -4,7 +4,7 @@
   "description": "The Server SDK of RongCloud",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cnpm install async@1.2.1 mocha@2.2.5 should@6.0.3 underscore@1.8.3 xml2js@0.4.9 && cd test && mocha ."
   },
   "repository": {
     "type": "git",
@@ -16,14 +16,9 @@
     "server",
     "sdk"
   ],
-  "dependencies" : {
-    "mocha"      : "*",
-    "should"     : "*",
-    "underscore" : "*",
-    "async"      : "*",
-    "xml2js"     : "*",
-    "superagent" : ">=0.21.0",
-    "sha1"       : ">=1.1.0"
+  "dependencies": {
+    "sha1": ">=1.1.0",
+    "superagent": ">=0.21.0"
   },
   "author": "RongCloud",
   "contributors": [
