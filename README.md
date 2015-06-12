@@ -5,18 +5,18 @@
 The server SDK is a wrapper of all the https API calls, which could be found [here](http://www.rongcloud.cn/docs/server.html)
 
 
-##Install
+## Install
 
 >npm install rongcloud-sdk
 
-##Init
+## Init
 
 ```
 var rongcloudSDK = require( 'rongcloud-sdk' );
 rongcloudSDK.init( 'APP_KEY', 'APP_SECRET' );
 ```
 
-##Usage
+## Usage
 
 
 ```
@@ -34,7 +34,7 @@ rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg
 
 ```
 
-##Asking for a xml format response
+## Asking for a xml format response
 ```
 rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg', 'xml', function( err, resultText ) {
   if( err ) {
@@ -46,7 +46,7 @@ rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg
 } );
 ```
 
-## API Coverage
+##  API Coverage
 The SDK covers all of the RongCloud APIs, including:
 
 [User](http://www.rongcloud.cn/docs/server.html#用户服务)
@@ -74,7 +74,7 @@ You can call
 `rongcloudSDK.user.getToken`
 
 
-##Testing
+## Testing
 Since most of the time the user won't be using the components for testing(they are async, underscore, mocha, should and xml2js), these components are obtained only in the npm test script( you can see the scripts for testing in package.json), for testing, just run:
 
 ```
@@ -82,5 +82,5 @@ npm install
 npm test
 ```
 
-##License
+## License
 [MIT](LICENSE)
