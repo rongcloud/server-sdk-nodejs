@@ -7,11 +7,13 @@ The server SDK is a wrapper of all the https API calls, which could be found [he
 
 ## Install
 
->npm install rongcloud-sdk
+```bash
+$ npm install rongcloud-sdk
+```
 
 ## Init
 
-```
+```js
 var rongcloudSDK = require( 'rongcloud-sdk' );
 rongcloudSDK.init( 'APP_KEY', 'APP_SECRET' );
 ```
@@ -19,7 +21,7 @@ rongcloudSDK.init( 'APP_KEY', 'APP_SECRET' );
 ## Usage
 
 
-```
+```js
 rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg', function( err, resultText ) {
   if( err ) {
     // Handle the error
@@ -35,7 +37,8 @@ rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg
 ```
 
 ## Asking for a xml format response
-```
+
+```js
 rongcloudSDK.user.getToken( '0001', 'Lance', 'http://files.domain.com/avatar.jpg', 'xml', function( err, resultText ) {
   if( err ) {
     // Handle the error
@@ -77,9 +80,9 @@ You can call
 ## Testing
 Since most of the time the user won't be using the components for testing(they are async, underscore, mocha, should and xml2js), these components are obtained only in the npm test script( you can see the scripts for testing in package.json), for testing, just run:
 
-```
-npm install
-npm test
+```bash
+$ npm install
+$ npm test
 ```
 
 ## License
