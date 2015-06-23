@@ -1,4 +1,5 @@
-#The RongCloud Server SDK
+The RongCloud Server SDK
+------------------------
 
 [Rong Cloud](http://rongcloud.cn) is committed to providing cloud-based instant messaging services for Internet and Mobile Internet developers. It enables developers to quickly integrate instant messaging capabilities with applications without any hardware installation requirements.
 
