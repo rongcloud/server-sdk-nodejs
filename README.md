@@ -83,6 +83,7 @@ Since most of the time the user won't be using the components for testing(they a
 
 ```bash
 $ npm install
+$ npm installTestModules
 $ npm test
 ```
 
