@@ -1,6 +1,6 @@
 module.exports = {
-	appKey 		: 'mgb7ka1nbs3wg',
-	appSecret 	: 'm1Rv2MHHND',
+	appKey 		: '3argexb6rvhse',
+	appSecret 	: 'rojizixQlP52EH',
 	token : {
 		userId 		: '0001',
 		name   		: 'TestUser',
