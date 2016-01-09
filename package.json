@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "sha1": ">=1.1.0",
-    "superagent": ">=0.21.0"
+    "superagent": ">=0.21.0",
+    "xml2js": "^0.4.15"
   },
   "author": "RongCloud",
   "contributors": [
