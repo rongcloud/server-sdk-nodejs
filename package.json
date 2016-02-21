@@ -18,6 +18,7 @@
     "sdk"
   ],
   "dependencies": {
+    "bluebird": "^3.3.1",
     "superagent": ">=0.21.0"
   },
   "author": "RongCloud",
