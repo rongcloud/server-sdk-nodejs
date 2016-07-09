@@ -60,9 +60,49 @@ describe( 'Group Test', function() {
 		} );
 	} );
 
+	describe( 'Query Group Users', function() {
+		it( 'Query Group Users: should return OK', function( done ) {
+			rongSDK.group.user.query( 'MyGroupID', function( err, result ) {
+				should.not.exists( err );
+				var result = JSON.parse( result );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+	});
+
+	describe( 'Group User Gag', function() {
+		it( 'Add group user gag: should return OK', function( done ) {
+			rongSDK.group.user.gag.add( testConfig.message.fromUserId, 'MyGroupID', 1, function( err, result ) {
+				should.not.exists( err );
+				var result = JSON.parse( result );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
+		it( 'List group user gag: should return OK', function( done ) {
+			rongSDK.group.user.gag.list( 'MyGroupID', function( err, result ) {
+				should.not.exists( err );
+				var result = JSON.parse( result );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+
+		it( 'Rollback group user gag: should return OK', function( done ) {
+			rongSDK.group.user.gag.rollback( testConfig.message.fromUserId, 'MyGroupID', function( err, result ) {
+				should.not.exists( err );
+				var result = JSON.parse( result );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+	});
+
 	describe( 'Dissmiss Group', function() {
 		it( 'Dismiss group(' + groupNames[0] + '): should return OK', function( done ) {
-			rongSDK.group.quit( testConfig.group.userId, groupIDs[0], function( err, resultText ) {
+			rongSDK.group.dismiss( testConfig.group.userId, groupIDs[0], function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -71,7 +111,7 @@ describe( 'Group Test', function() {
 		} );
 
 		it( 'Dismiss group(' + groupNames[1] + '): should return OK', function( done ) {
-			rongSDK.group.quit( testConfig.group.userId, groupIDs[1], function( err, resultText ) {
+			rongSDK.group.dismiss( testConfig.group.userId, groupIDs[1], function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -80,7 +120,7 @@ describe( 'Group Test', function() {
 		} );
 
 		it( 'Dismiss group(MyGroupName): should return OK', function( done ) {
-			rongSDK.group.quit( testConfig.group.userId, 'MyGroupID', function( err, resultText ) {
+			rongSDK.group.dismiss( testConfig.group.userId, 'MyGroupID', function( err, resultText ) {
 				should.not.exists( err );
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -89,5 +129,19 @@ describe( 'Group Test', function() {
 		} );
 
 	} );
+
+
+	describe( 'Refresh Group', function() {
+		var newGroupName = groupNames[0];
+		it( 'Refresh group(' + groupNames[0] + ') to be ' + newGroupName + ': should return OK', function( done ) {
+			rongSDK.group.refresh( groupIDs[0], newGroupName, function( err, resultText ) {
+				should.not.exists( err );
+				var result = JSON.parse( resultText );
+				result.code.should.equal( 200 );
+				done();
+			} );
+		} );
+	});
+
 
 } );
