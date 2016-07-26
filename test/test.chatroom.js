@@ -95,8 +95,8 @@ describe( 'Chatroom Test', function() {
 	} );
 
 
-	describe('Banned Chatroom Members', function() {
-		it('Add chatRoom banned members: should return OK', function( done ) {
+	describe('Banned Chatroom', function() {
+A		it('Add banned user to the chatroom: should return OK', function( done ) {
 			rongSDK.chatroom.user.gagAdd( chatroomIDs[0],testUser.userId,2,'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -104,7 +104,7 @@ describe( 'Chatroom Test', function() {
 			} );
 		});
 
-		it('Rollback chatRoom banned members',function(done){
+		it('Remove banned user from the chatroom',function(done){
 			rongSDK.chatroom.user.gagRollback(chatroomIDs[0],testUser.userId,'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -112,7 +112,7 @@ describe( 'Chatroom Test', function() {
 			} );
 		});
 
-		it('Query chatRoom banned members',function(done){
+		it('Query banned users from the chatroom',function(done){
 			rongSDK.chatroom.user.gagList(chatroomIDs[0],'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -123,7 +123,7 @@ describe( 'Chatroom Test', function() {
 
 
 	describe('Block Chatroom', function() {
-		it('Add block member of chatroom: should return OK', function( done ) {
+		it('Add block user to the chatroom: should return OK', function( done ) {
 			rongSDK.chatroom.user.blockAdd( chatroomIDs[0],testUser.userId,2,'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -131,7 +131,7 @@ describe( 'Chatroom Test', function() {
 			} );
 		});
 
-		it('Rollback block member of chatroom: should return OK',function(done){
+		it('Remove block user from the chatroom: should return OK',function(done){
 			rongSDK.chatroom.user.blockRollback(chatroomIDs[0],testUser.userId,'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
@@ -139,7 +139,7 @@ describe( 'Chatroom Test', function() {
 			} );
 		});
 
-		it('Query chatRoom block members: should return OK',function(done){
+		it('Query block users from the chatroom: should return OK',function(done){
 			rongSDK.chatroom.user.blockList(chatroomIDs[0],'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
