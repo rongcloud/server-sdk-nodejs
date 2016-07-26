@@ -96,7 +96,7 @@ describe( 'Chatroom Test', function() {
 
 
 	describe('Banned Chatroom', function() {
-A		it('Add banned user to the chatroom: should return OK', function( done ) {
+		it('Add banned user to the chatroom: should return OK', function( done ) {
 			rongSDK.chatroom.user.gagAdd( chatroomIDs[0],testUser.userId,2,'json', function( err, resultText ) {
 				var result = JSON.parse( resultText );
 				result.code.should.equal( 200 );
