@@ -8,12 +8,20 @@ npm install rongcloud-sdk
 
 #### 使用
 
+请前往 [开发者后台](https://developer.rongcloud.cn) 创建应用 -> 获取 Appkey、Secret
+
 以注册用户为例
 
 ```js
+//替换成您自己的 Appkey
+var appkey = '8luwapucoil';
+
+// 替换成您自己的 Secret
+var secret = 'y0iyjl4h3LWz';
+
 var RongSDK = require('rongcloud-sdk')({
-    appkey: '8luwapucoil',
-    secret: 'y0iyjl4h3LWz'
+    appkey: appkey,
+    secret: secret
 });
 
 // API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#register
@@ -32,7 +40,7 @@ User.register(user).then(result => {
 
 #### 文档
 
-[API 文档](http://rongcloud.github.io/server-sdk-nodejs/docs)
+[API 文档](http://rongcloud.github.io/server-sdk-nodejs/docs/v1)
 
 [API 示例](./example)
 
@@ -40,7 +48,7 @@ User.register(user).then(result => {
 
 1、下载或克隆 `server-sdk-nodejs`
 
-2、进入项目 `server-sdk-nodejs` 目录
+2、进入项目 `cd server-sdk-nodejs`
 
 3、安装依赖 `npm install`
 
