@@ -1,0 +1,19 @@
+{
+    "plugins": [
+        "prism", "-highlight", "codetabs", "custom-html","expandable-chapters", 
+        "-sharing", "-fontsettings"
+    ],
+    "pluginsConfig": {
+      "customHTML": {
+        "js": "js/banner.js"
+      },
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-okaidia.css"
+        ]
+      }
+    },
+    "styles": {
+      "website": "style/website.css"
+    }
+}

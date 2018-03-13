@@ -1,0 +1,65 @@
+{
+	"chatroom": {
+		"_self": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			}
+		},
+		"id": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			}
+		},
+		"name": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			}
+		},
+		"members": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"typeof": {
+				"type": "array",
+				"invalid": "20006"
+			}
+		},
+		"minute": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"size": {
+				"max": 43200,
+				"min": 1,
+				"invalid": "20004"
+			},
+			"typeof": {
+				"type": "number",
+				"invalid": "20006"
+			}
+		}
+	},
+	"demotion": {
+		"_self": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			}
+		},
+		"msgs": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"typeof": {
+				"type": "array",
+				"invalid": "20006"
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+{
+  "message": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "senderId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "targetId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "mentionedInfo":{
+    "type": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "userIds": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "broadcast": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "senderId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "length": {
+        "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "recallMsg": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "senderId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "length": {
+        "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "sentTime": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "uId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "tplMsg": {
+    "senderId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "template": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  }
+}

@@ -1,11 +1,10 @@
 {
   "name": "rongcloud-sdk",
-  "version": "1.0.3",
+  "version": "3.0.0",
   "description": "The Server SDK of RongCloud",
   "main": "index.js",
   "scripts": {
-    "installTestModules": "npm install async@1.2.1 mocha@2.2.5 should@6.0.3 underscore@1.8.3 xml2js@0.4.9",
-    "test": "cd test && mocha ."
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js"
   },
   "repository": {
     "type": "git",
@@ -17,15 +16,11 @@
     "server",
     "sdk"
   ],
-  "dependencies": {
-    "bluebird": "^3.3.1",
-    "superagent": ">=0.21.0"
-  },
   "author": "RongCloud",
   "contributors": [
     {
-      "name": "crystaldust",
-      "email": "juzhenatpku@gmail.com"
+      "name": "yuhongda",
+      "email": "yuhongda0315@163.com"
     }
   ],
   "license": "MIT",
@@ -33,10 +28,11 @@
     "url": "https://github.com/rongcloud/server-sdk-nodejs/issues"
   },
   "homepage": "http://rongcloud.cn",
+  "dependencies": {
+    "superagent": "^3.8.1",
+    "underscore": "^1.8.3"
+  },
   "devDependencies": {
-    "async": "^1.5.2",
-    "should": "^8.0.2",
-    "underscore": "^1.8.3",
-    "xml2js": "^0.4.15"
+    "jasmine": "^2.8.0"
   }
 }
