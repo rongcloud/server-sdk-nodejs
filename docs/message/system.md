@@ -13,7 +13,7 @@
 | pushContent		| string 	| 	否 	| push 内容, 分为两类 [内置消息 Push](../GLOSSARY.md#inner-message-push) 、[自定义消息 Push](../GLOSSARY.md#custom-message-push) | 3.0.0 |
 | pushData 			| object 	| 	否 	| iOS 平台为 Push 通知时附加到 payload 中，Android 客户端收到推送消息时对应字段名为 pushData| 3.0.0 |
 | count 			| string 	| 	否 	| 针对 iOS 平台，Push 时用来控制未读消息显示数 | 3.0.0 |
-| isPersisted 		| string 	| 	否 	| 是否在融云服务器存储, 0: 不存储, 1: 存储, 默认: 1| 3.0.0 |
+| isPersisted 		| string 	| 	否 	|  <span style="color:red;">是否在融云服务器存储, 0: 不存储, 1: 存储, 默认: 1 </span>| 3.0.0 |
 | isCounted 		| number 	| 	否 	| 在各端是否计数, 0: 不计数, 1: 计数, 默认: 1| 3.0.0 |
 
 ##### 请求成功
