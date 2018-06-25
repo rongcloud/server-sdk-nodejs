@@ -1,6 +1,6 @@
 ### Server SDK
 
-**Server SDK 文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
+**文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
 
 #### 初始化
 
