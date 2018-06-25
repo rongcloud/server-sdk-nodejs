@@ -8,7 +8,7 @@
 
 #### Server SDK{#server-sdk}
 
-各平台 SDK **源码**、**示例** 请移步: [Java](https://github.com/rongcloud/server-sdk-java)、 [Node](https://github.com/rongcloud/server-sdk-nodejs)
+各平台 SDK **源码**、**示例** 请移步: [Java](https://github.com/rongcloud/server-sdk-java)、 [Node.js](https://github.com/rongcloud/server-sdk-nodejs)
 
 #### SDK 使用指南
 
@@ -18,7 +18,7 @@
 
 蓝色框表示应用服务器 (App Server)，用来处理业务数据，比如用户信息、群组关系等
 
-App Server 会使用到融云 Server SDK： [Java](https://github.com/rongcloud/server-sdk-java)、 [Node](https://github.com/rongcloud/server-sdk-nodejs)
+App Server 会使用到融云 Server SDK： [Java](https://github.com/rongcloud/server-sdk-java)、 [Node.js](https://github.com/rongcloud/server-sdk-nodejs)
 
 蓝色为应用（App），客户端发送消息使用，会用到各端 SDK: [iOS](http://www.rongcloud.cn/docs/ios.html#integration)、[Android](http://www.rongcloud.cn/docs/android.html#integration)、[Web](http://www.rongcloud.cn/docs/web.html#sdk)、[Desktop](http://www.rongcloud.cn/docs/desktop.html)
 

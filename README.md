@@ -1,6 +1,12 @@
 ### Server SDK
 
+**Server SDK 文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
+
 #### 初始化
+
+1、安装 [Node.js 4.0+](http://nodejs.cn/download/)
+
+2、安装 `rongcloud-sdk`
 
 ```
 npm install rongcloud-sdk
