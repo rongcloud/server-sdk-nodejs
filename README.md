@@ -12,10 +12,11 @@ npm install rongcloud-sdk
 
 以注册用户为例
 
+**Promise 方式**
+
 ```js
 //替换成您自己的 Appkey
 var appkey = '8luwapucoil';
-
 // 替换成您自己的 Secret
 var secret = 'y0iyjl4h3LWz';
 
@@ -33,8 +34,36 @@ var user = {
 };
 User.register(user).then(result => {
 	console.log(result);
-}, error => { 
+}, error => {
 	console.log(error);
+});
+```
+
+**Co 方式**
+```js
+//替换成您自己的 Appkey
+var appkey = '8luwapucoil';
+// 替换成您自己的 Secret
+var secret = 'y0iyjl4h3LWz';
+
+var RongSDK = require('rongcloud-sdk')({
+    appkey: appkey,
+    secret: secret
+});
+var co = require('co');
+
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#register
+var User = RongSDK.User;
+co(function* (){
+  var user = {
+  	id: 'ujadk90ha',
+  	name: 'Maritn',
+  	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
+  };
+  var result = yield User.register(user)
+  console.log(result);
+}).catch(error => {
+  console.log(error);
 });
 ```
 
@@ -57,4 +86,3 @@ User.register(user).then(result => {
 #### 声明
 
 3.0.0 版本 SDK API 不再向老版本兼容，老版本 SDK 可用但不再维护
-
