@@ -1,6 +1,6 @@
 {
   "name": "rongcloud-sdk",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The Server SDK of RongCloud",
   "main": "index.js",
   "scripts": {
