@@ -4,8 +4,13 @@
   "description": "The Server SDK of RongCloud",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js"
+    "eslint": "eslint .",
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js",
+    "precommit": "npm run eslint"
   },
+  "precommit": [
+    "npm run precommit"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/rongcloud/server-sdk-nodejs"
@@ -33,6 +38,8 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "jasmine": "^2.8.0"
+    "eslint": "^5.9.0",
+    "jasmine": "^2.8.0",
+    "precommit": "^1.2.2"
   }
 }
