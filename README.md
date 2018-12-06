@@ -4,7 +4,7 @@
 
 #### 初始化
 
-1、安装 [Node.js 4.0+](http://nodejs.cn/download/)
+1、生产环境 Node.js 支持最低版本为 [4.0+](http://nodejs.cn/download/)，开发环境要求 Node.js 最低版本为 [8.0+](http://nodejs.cn/download/)
 
 2、安装 `rongcloud-sdk`
 
