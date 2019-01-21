@@ -75,7 +75,7 @@ co(function* (){
 
 #### 文档
 
-[API 文档](http://rongcloud.github.io/server-sdk-nodejs/docs/v1)
+[API 文档](https://www.rongcloud.cn/docs/server_sdk_api/)
 
 [API 示例](./example)
 
