@@ -6,7 +6,7 @@
 
 此功能需开通 [专有云服务](http://www.rongcloud.cn/deployment#proprietary-cloud)
 
-### Ban.add(chatroom){#add}
+### MuteChatrooms.add(chatroom){#add}
 
 添加聊天室全局禁言
 
@@ -31,7 +31,7 @@
 }
 ```
 
-### Ban.remove(chatroom){#remove}
+### MuteChatrooms.remove(chatroom){#remove}
 
 解除聊天室全局禁言
 
@@ -54,7 +54,7 @@
     "code": 200
 }
 ```
-### Ban.getList(){#getList}
+### MuteChatrooms.getList(){#getList}
 
 获取聊天室全局禁言列表
 

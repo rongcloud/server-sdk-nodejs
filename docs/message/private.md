@@ -15,7 +15,6 @@
 | count 			| string 	| 	否 	| 针对 iOS 平台，Push 时用来控制未读消息显示数 | 3.0.0 |
 | verifyBlacklist 	| number 	| 	否 	| 是否过滤接收用户黑名单列表, 0: 不过滤 、1: 过滤，默认: 0 | 3.0.0 |
 | isPersisted 		| number 	| 	否 	| <span style="color:red;">是否在融云服务器存储, 0: 不存储, 1: 存储, 默认: 1 </span>| 3.0.0 |
-| isCounted 		| number 	| 	否 	| 在各端是否计数, 0: 不计数, 1: 计数, 默认: 1| 3.0.0 |
 | isIncludeSender 	| string 	| 	否 	| 发送者自己是否接收此条消息, 0: 不接收, 1: 接收, 默认: 0| 3.0.0 |
 
 ##### 请求成功

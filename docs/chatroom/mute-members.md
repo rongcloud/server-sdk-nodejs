@@ -1,6 +1,6 @@
 ## 聊天成员禁言模块
 
-### Gag.add(chatroom){#add}
+### MuteMembers.add(chatroom){#add}
 
 添加聊天室成员禁言，多次调用，以最后一次为准
 
@@ -26,7 +26,7 @@
 }
 ```
 
-### Gag.remove(chatroom){#remove}
+### MuteMembers.remove(chatroom){#remove}
 
 解除聊天室成员禁言
 
@@ -50,7 +50,7 @@
     "code": 200
 }
 ```
-### Gag.getList(chatroom){#getList}
+### MuteMembers.getList(chatroom){#getList}
 
 获取聊天室成员禁言列表
 

@@ -1,6 +1,6 @@
 ## 群成员禁言服务
 
-### Gag.add(group){#add}
+### MuteMembers.add(group){#add}
 
 添加群成员禁言，禁止群成员在群内发送消息，禁言后只能接收消息
 
@@ -26,7 +26,7 @@
 }
 ```
 
-### Gag.remove(group){#remove}
+### MuteMembers.remove(group){#remove}
 
 解除禁言
 
@@ -51,7 +51,7 @@
 }
 ```
 
-### Gag.getList(group){#getList}
+### MuteMembers.getList(group){#getList}
 
 查询禁言成员列表
 
