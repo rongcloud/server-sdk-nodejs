@@ -29,6 +29,7 @@
 		* [Private.sendTemplate](message/private.md#sendTemplate)
 	* 群组消息 (Group)
 		* [Group.send](message/group.md#send)
+		* [Group.sendDirection](message/group.md#sendDirection)
 		* [Group.sendMention](message/group.md#sendMention)
 		* [Group.recall](message/group.md#recall)
 	* 聊天室 (Chatroom)
