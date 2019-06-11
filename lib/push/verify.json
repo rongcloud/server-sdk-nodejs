@@ -1,0 +1,54 @@
+{
+  "content": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "platform": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "array",
+        "invalid": "20006"
+      }
+    },
+    "audience": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "fromUserId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "string",
+        "invalid": "20006"
+      }
+    },
+    "notification": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    }
+  }
+}
