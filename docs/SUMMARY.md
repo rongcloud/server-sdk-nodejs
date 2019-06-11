@@ -14,6 +14,10 @@
 		* [Block.add](user/block.md#add)
 		* [Block.remove](user/block.md#remove)
 		* [Block.getList](user/block.md#getList)
+	* 用户标签 (Tag)
+		* [Tag.set](user/tag.md#set)
+		* [Tag.batchset](user/tag.md#batchset)
+		* [Tag.get](user/tag.md#get)
 	* 全局群组禁言 (MuteGroups)
 		* [MuteGroups.add](user/mute-groups.md#add)
 		* [MuteGroups.remove](user/mute-groups.md#remove)
@@ -42,6 +46,9 @@
 	* 历史消息 (History)
 		* [History.get](message/history.md#get)
 		* [History.remove](message/history.md#remove)
+* 广播推送模块（Push）
+	* [Push.push](push/push.md#push)
+	* [Push.message](push/push.md#message)
 * 群组模块
 	* 群组 (Group)
 		* [Group.sync](group/group.md#sync)
