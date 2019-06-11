@@ -62,6 +62,26 @@
         "type": "array",
         "invalid": "20006"
       }
+    },
+    "tags": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "array",
+        "invalid": "20006"
+      }
+    },
+    "users": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "array",
+        "invalid": "20006"
+      }
     }
   }
 }
