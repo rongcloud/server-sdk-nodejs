@@ -73,9 +73,11 @@
     "url": "user/tag/batch/set",
     "params": {
       "user": {
-        "users": [{
-          "id": "dkakd"
-        }],
+        "users": [
+          {
+            "id": "dkakd"
+          }
+        ],
         "tags": [
           "大叔"
         ]
@@ -111,9 +113,11 @@
     "url": "user/tag/batch/set",
     "params": {
       "user": {
-        "users": [{
-          "id": "dkakd"
-        }]
+        "users": [
+          {
+            "id": "dkakd"
+          }
+        ]
       }
     },
     "response": {
@@ -145,11 +149,9 @@
     "docs": "https://www.rongcloud.cn/docs/push_service.html#user_tags_get",
     "url": "user/tags/get",
     "params": {
-      "users": [
-        {
-          "id": "dkakdk"
-        }
-      ]
+      "user": {
+        "id": "aFo990k"
+      }
     },
     "response": {
       "success": {
