@@ -1,19 +1,21 @@
 "use strict";
 describe('User', () => {
-	let _golbal, User, UserBlacklist, UserBlock, OnlineStatus;
+	let _golbal, User, UserBlacklist, UserBlock, OnlineStatus, UserTag;
 
-	beforeAll(function() {
+	beforeAll(function () {
 		_golbal = this;
 		User = _golbal.rongSDK.User;
 		UserBlacklist = User.Blacklist;
 		UserBlock = User.Block;
 		OnlineStatus = User.OnlineStatus;
+		UserTag = User.Tag;
 	});
 
 	const config = require('../lib/user/api.json');
 
 	const blackConf = require('../lib/user/blacklist/api.json');
 	const blockConf = require('../lib/user/block/api.json');
+	const tagConf = require('../lib/user/tag/api.json');
 	const onlineConf = require('../lib/user/online-status/api.json');
 
 	describe('register', () => {
@@ -50,7 +52,7 @@ describe('User', () => {
 			let user = _golbal.user;
 			return User.register({
 				name: user.name,
-				portrait:user.portrait
+				portrait: user.portrait
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -80,7 +82,7 @@ describe('User', () => {
 			});
 		});
 	});
-	
+
 	describe('update', () => {
 		let conf = config.update;
 
@@ -115,7 +117,7 @@ describe('User', () => {
 			let user = _golbal.user;
 			return User.update({
 				name: user.name,
-				portrait:user.portrait
+				portrait: user.portrait
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -242,7 +244,7 @@ describe('User', () => {
 			});
 		});
 	});
-	
+
 	describe('Blacklist.getList', () => {
 		let conf = blackConf.getList;
 		let response = conf.response;
@@ -375,6 +377,133 @@ describe('User', () => {
 			return UserBlock.remove(user).then(result => {
 				expect(result).toBeUndefined();
 			}, error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Tag.set', () => {
+		let conf = tagConf.set;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				tags: user.tags
+			};
+			return UserTag.set(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Tags is emtpy', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserTag.set(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+	describe('Tag.remove', () => {
+		let conf = tagConf.remove;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserTag.remove(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('UserId is emtpy', () => {
+			let user = {};
+			return UserTag.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+	describe('Tag.batchSet', () => {
+		let conf = tagConf.batchSet;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			let params = {
+				users: [{
+					id: user.id
+				}],
+				tags: user.tags
+			};
+			return UserTag.batchSet(params).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Tags is emtpy', () => {
+			let user = _golbal.user;
+			let params = {
+				users: [{
+					id: user.id
+				}]
+			};
+			return UserTag.batchSet(params).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+	describe('Tag.batchRemove', () => {
+		let conf = tagConf.batchRemove;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			let params = {
+				users: [{
+					id: user.id
+				}]
+			};
+			return UserTag.batchRemove(params).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Users is emtpy', () => {
+			let user = _golbal.user;
+			let params = {
+			};
+			return UserTag.batchRemove(params).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+	describe('Tag.getList', () => {
+		let conf = tagConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			let users = [{
+				id: user.id
+			}]
+			return UserTag.getList(users).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Users is emtpy', () => {
+			let users;
+			return UserTag.getList(users).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});

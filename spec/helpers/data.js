@@ -19,6 +19,8 @@ beforeAll(function() {
         minute: 10,
         largeMinute: 543200,
 
+        tags: ['IM'],
+
         id: 'ujadk90ha',
         largeId: _.times(35, () => {
             return 'Id'
