@@ -3,7 +3,7 @@ const utils = require('../../lib/utils');
 const _ = utils.underscore;
 const RongCloud = require('../../index');
 
-beforeAll(function() {
+beforeAll(function () {
     let appkey = '8luwapkvucoil';
     let secret = 'y0icysjl4h3LWz';
 
@@ -50,7 +50,7 @@ beforeAll(function() {
         }).join(''),
         sync: {
             id: 'martin9901',
-            groups: [{id: 'group999', name: 'RongCloud'}]
+            groups: [{ id: 'group999', name: 'RongCloud' }]
         },
         create: {
             id: 'kl9k98mn',
@@ -259,14 +259,14 @@ beforeAll(function() {
 
     this.conversation = {
         mute: {
-             type: 'PRIVATE',
-             userId: 'member01',
-             targetId: 'watergroup'
+            type: 'PRIVATE',
+            userId: 'member01',
+            targetId: 'watergroup'
         },
         unmute: {
-             type: 'PRIVATE',
-             userId: 'member01',
-             targetId: 'watergroup'
+            type: 'PRIVATE',
+            userId: 'member01',
+            targetId: 'watergroup'
         }
     };
     this.chatroom = {
@@ -298,20 +298,20 @@ beforeAll(function() {
             }]
         },
         blockAdd: {
-             id: 'ChartRoomId',
-             members: [{
+            id: 'ChartRoomId',
+            members: [{
                 id: 'seal9901'
             }],
             minute: 30
         },
         blockRemove: {
-             id: 'ChartRoomId',
-             members: [{
+            id: 'ChartRoomId',
+            members: [{
                 id: 'seal9901'
             }]
         },
         blockgetList: {
-             id: 'ChartRoomId'
+            id: 'ChartRoomId'
         },
         demotionAdd: {
             msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
@@ -355,8 +355,8 @@ beforeAll(function() {
             msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
         },
         whiteUserAdd: {
-             id: 'chatroom001',
-             members: [{
+            id: 'chatroom001',
+            members: [{
                 id: 'seal9901'
             }]
         },
@@ -367,7 +367,31 @@ beforeAll(function() {
             }]
         },
         whiteUsergetList: {
-             id: 'chatroom001'
+            id: 'chatroom001'
+        }
+    };
+
+    this.pushContent = {
+        platform: ["ios", "android"],
+        audience: { tag: ["女", "年轻"], tag_or: ["北京", "上海"], userid: ["123", "456"], "is_to_all": false },
+        notification: {
+            alert: "this is a push",
+            ios: { title: "标题", alert: "override alert", extras: { id: "userId2", name: "Lisa" } },
+            android: { alert: "override alert", extras: { id: "userId", name: "martin" } }
+        }
+    };
+    this.pushMessage = {
+        platform: ["ios", "android"],
+        fromUserId: 'mon888',
+        audience: { tag: ["女", "年轻"], tag_or: ["北京", "上海"], userid: ["123", "456"], is_to_all: false },
+        message: {
+            content: JSON.stringify({ content: 'hello' }),
+            objectName: "RC:TxtMsg"
+        },
+        notification: {
+            alert: "this is a push",
+            ios: { title: "标题", alert: "override alert", extras: { id: "userId2", name: "Lisa" } },
+            android: { alert: "override alert", extras: { id: "userId", name: "martin" } }
         }
     };
 });
