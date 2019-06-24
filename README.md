@@ -2,6 +2,8 @@
 
 **文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
 
+[SDK 功能清单](./function-list.md)
+
 #### 初始化
 
 1、生产环境 Node.js 支持最低版本为 [4.0+](http://nodejs.cn/download/)，开发环境要求 Node.js 最低版本为 [8.0+](http://nodejs.cn/download/)
@@ -92,7 +94,6 @@ co(function* (){
 **[敏感词模块示例](./example/promise/sensitive.js)**
 
 **[远程推送](./example/promise/push.js)**
-
 
 #### 单元测试
 
