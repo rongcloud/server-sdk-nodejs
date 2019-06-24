@@ -77,7 +77,22 @@ co(function* (){
 
 [API 文档](https://www.rongcloud.cn/docs/server_sdk_api/)
 
-[API 示例](./example)
+#### 示例
+
+**[用户模块示例](./example/promise/user)**
+
+**[消息模块示例](./example/promise/message)**
+
+**[群组模块示例](./example/promise/group)**
+
+**[聊天室模块示例](./example/promise/chatroom)**
+
+**[会话模块示例](./example/promise/conversation.js)**
+
+**[敏感词模块示例](./example/promise/sensitive.js)**
+
+**[远程推送](./example/promise/push.js)**
+
 
 #### 单元测试
 
