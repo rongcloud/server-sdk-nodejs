@@ -2,7 +2,7 @@
 
 ### User.register(user){#register}
 
-注册用户，生成用户在融云的唯一身份标识 `Token`，各端 SDK 使用 `Token` 连接融云服务器
+生成用户在融云的唯一身份标识 `Token`，各端 SDK 使用 `Token` 连接融云服务器，终端用户在使用融云通讯能力前必须获取 Token。
 
 `user` 参数的**属性说明**：
 
