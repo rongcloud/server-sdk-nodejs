@@ -27,7 +27,7 @@
 }
 ```
 
-### Chatroom.destory(chatroom){#destory}
+### Chatroom.destroy(chatroom){#destroy}
 
 销毁聊天室，禁言、封禁关系不销毁
 

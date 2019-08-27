@@ -21,12 +21,12 @@ Chatroom.create(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server_sdk_api/chatroom/chatroom.html#destory
+API 文档: http://www.rongcloud.cn/docs/server_sdk_api/chatroom/chatroom.html#destroy
 */
 var chatroom = {
 	id: 'chrm001'
 };
-Chatroom.destory(chatroom).then(result => {
+Chatroom.destroy(chatroom).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);

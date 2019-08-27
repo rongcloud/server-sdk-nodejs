@@ -274,7 +274,7 @@ beforeAll(function () {
             id: 'MNiuhfd91k',
             name: '大融云'
         }],
-        destory: {
+        destroy: {
             id: ['MNiuhfd91k', 'testChrmId']
         },
         get: {

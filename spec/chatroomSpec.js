@@ -59,20 +59,20 @@ describe('Chatroom', () => {
 		let success = response.success.code;
 
 		it('参数无效', () => {
-			return Chatroom.destory({}).catch(error => {
+			return Chatroom.destroy({}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
 		it('Success', () => {
-			let chatroom = _golbal.chatroom.destory;
-			return Chatroom.destory(chatroom).then(result => {
+			let chatroom = _golbal.chatroom.destroy;
+			return Chatroom.destroy(chatroom).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
 
 		it('Fail', () => {
-			return Chatroom.destory({
+			return Chatroom.destroy({
 				id: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();

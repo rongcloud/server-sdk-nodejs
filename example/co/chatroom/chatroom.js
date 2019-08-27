@@ -23,13 +23,13 @@ co(function *() {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server_sdk_api/chatroom/chatroom.html#destory
+API 文档: http://www.rongcloud.cn/docs/server_sdk_api/chatroom/chatroom.html#destroy
 */
 co(function *() {
   var chatroom = {
   	id: 'chrm001'
   };
-  var result = yield Chatroom.destory(chatroom);
+  var result = yield Chatroom.destroy(chatroom);
   console.log(result);
 }).catch(error => {
   console.log(error);
