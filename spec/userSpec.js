@@ -508,4 +508,23 @@ describe('User', () => {
 			});
 		});
 	});
+	describe('OnlineStatus.get', () => {
+		let conf = onlineConf.get;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			return OnlineStatus.get(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('User is emtpy', () => {
+			let user;
+			return OnlineStatus.get(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
 });
