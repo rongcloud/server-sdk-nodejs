@@ -12,7 +12,7 @@ API 文档: https://www.rongcloud.cn/docs/server_sdk_api/group/mute-all-members.
 */
 MuteAll.add({
 	groups: [{
-		id: 'seal9901'
+		id: 'WaterGroup'
 	}]
 }).then(result => {
 	console.log(result);
@@ -25,7 +25,7 @@ API 文档: https://www.rongcloud.cn/docs/server_sdk_api/group/mute-all-members.
 */
 MuteAll.remove({
 	groups:  [{
-		id: 'seal9901'
+		id: 'WaterGroup'
 	}]
 }).then(result => {
 	console.log(result);

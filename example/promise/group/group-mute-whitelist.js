@@ -11,9 +11,9 @@ var MuteWhitelist = Group.Mute.Whitelist;
 API 文档: https://www.rongcloud.cn/docs/server_sdk_api/group/whiteList/mute-user.html#add
 */
 MuteWhitelist.add({
-	id: 'group01',
+	id: 'WaterGroup',
 	members: [{
-		id: 'member01'
+		id: 'sea9901'
 	}]
 }).then(result => {
 	console.log(result);
@@ -25,21 +25,20 @@ MuteWhitelist.add({
 API 文档: https://www.rongcloud.cn/docs/server_sdk_api/group/whiteList/mute-user.html#remove
 */
 MuteWhitelist.remove({
-	id: 'group01',
+	id: 'WaterGroup',
 	members: [{
-		id: 'member01'
+		id: 'sea9901'
 	}]
 }).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
-
 /*
 API 文档: https://www.rongcloud.cn/docs/server_sdk_api/group/whiteList/mute-user.html#getList
 */
 MuteWhitelist.getList({
-	id: 'group01'
+	id: 'WaterGroup'
 }).then(result => {
 	console.log(result);
 }, error => {
