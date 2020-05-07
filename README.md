@@ -2,7 +2,7 @@
 
 _单元测试覆盖率:_
 
-![](./report.png)
+![](./report-0507.png)
 
 **文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
 
