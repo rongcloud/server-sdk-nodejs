@@ -31,7 +31,7 @@
         "invalid": "20006"
       },
       "length": {
-        "max": 99999999999,
+        "max": 20,
         "min": 1,
         "invalid": "20003"
       }
@@ -43,6 +43,21 @@
       },
       "length": {
         "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
+    "groups": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "array",
+        "invalid": "20006"
+      },
+      "length": {
+        "max": 20,
         "min": 1,
         "invalid": "20003"
       }
