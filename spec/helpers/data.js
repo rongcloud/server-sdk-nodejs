@@ -121,9 +121,9 @@ beforeAll(function () {
 
   this.groupMuteMember = {
     add: {
-      id: 'watergroup',
+      id: 'WaterGroup',
       members: [{
-        id: 'member01'
+        id: 'sea9901'
       }],
       minute: 43200
     },
@@ -134,7 +134,7 @@ beforeAll(function () {
       }]
     },
     getList: {
-      id: 'watergroup'
+      id: 'WaterGroup'
     }
   };
 
