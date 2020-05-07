@@ -1,5 +1,9 @@
 ### Server SDK
 
+_单元测试覆盖率:_
+
+![](./report.png)
+
 **文档迁移至**: http://www.rongcloud.cn/docs/server_sdk_api/
 
 [SDK 功能清单](./function-list.md)
@@ -104,10 +108,6 @@ co(function* (){
 3、安装依赖 `npm install`
 
 4、运行单元测试 `npm test`
-
-_代码覆盖率:_
-
-![](./report.png)
 
 #### 声明
 
