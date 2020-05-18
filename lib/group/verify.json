@@ -31,7 +31,7 @@
         "invalid": "20006"
       },
       "length": {
-        "max": 20,
+        "max": 999999,
         "min": 1,
         "invalid": "20003"
       }
