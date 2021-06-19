@@ -32,3 +32,14 @@ co(function* (){
 }).catch(error => {
   console.log(error);
 });
+
+// API 文档: https://www.rongcloud.cn/docs/server_sdk_api/user/user.html#get
+co(function* (){
+  var user = {
+  	id: 'ujadk90ha',
+  };
+  user = yield User.get(user);
+  console.log(user);
+}).catch(error => {
+  console.log(error);
+});
